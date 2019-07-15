@@ -4,11 +4,12 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=660px, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Igor K. summery</title>
 	
-    <link href="main.css" rel="stylesheet"></link>
+    <link href="styles/main.css" rel="stylesheet"></link>
+    <link href="styles/experiment.css" rel="stylesheet"></link>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -22,45 +23,54 @@
         </section>
     </header>
     <section class="section">
-        <div class="balon">
+        <div class="balloon">
 			<p>
-				Hello! My name is Igor, I'm <span id="birthday">22</span> old and I live in Odessa.
+				Hello! My name is Igor, I'm <span id="js-birthday">22</span> old and I live in Odessa.
 				<br>
 				I do web development, always try to follow the innovations in the world of the Internet and design and corresponds that.
 			</p>
         </div>
     </section>
     <section class="section">
-        <h2 class="section-title"><span>What I know</span></h2>
-        <div class="radialskills">
-            <ul>
-                <li>
-					<div class="radial">
-						<svg width="100" height="100" class="radial-chart">
-							<circle r="25" cx="50" cy="50" class="radial-pie"/>
-						</svg>
-						<p class="radial-title">HTML</p>
-						<p class="radial-percent">
-							<span class="radial-number">0</span>
-							%
-						</p>
-					</div>
-                </li>
-                <li class="radial r80">
-                    <p class="radial-title">CSS</p>
-                    <p class="radial-percent"><span class="radial-number">0</span>%</p>
-                </li>
-                <li class="radial r70">
-                    <p class="radial-title">PS</p>
-                    <p class="radial-percent"><span class="radial-number">0</span>%</p>
-                </li>
-                <li class="radial r40">
-                    <p class="radial-title">JS</p>
-                    <p class="radial-percent"><span class="radial-number">0</span>%</p>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
+        <h2 class="section-title"><span>My skills</span></h2>
+		<ul class="radialskills">
+			<li>
+				<div class="radial radial-primary">
+					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 142">
+						<circle r="25" cx="50" cy="50" class="radial-pie"/>
+					</svg>
+					<p class="radial-title">JS</p>					
+					<span class="radial-number" data-number="90"></span>	
+				</div>
+			</li>
+			<li>
+				<div class="radial radial-primary">
+					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 126">
+						<circle r="25" cx="50" cy="50" class="radial-pie"/>
+					</svg>
+					<p class="radial-title">CSS</p>					
+					<span class="radial-number" data-number="80"></span>	
+				</div>
+			</li>
+			<li>
+				<div class="radial radial-secondary">
+					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 110">
+						<circle r="25" cx="50" cy="50" class="radial-pie"/>
+					</svg>
+					<p class="radial-title">PS</p>					
+					<span class="radial-number" data-number="70"></span>	
+				</div>
+			</li>
+			<li>
+				<div class="radial radial-tertiary">
+					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 63">
+						<circle r="25" cx="50" cy="50" class="radial-pie"/>
+					</svg>
+					<p class="radial-title">JS</p>					
+					<span class="radial-number" data-number="40"></span>	
+				</div>
+			</li>
+		</ul>
         <ul class="subskills">
             <li>JQuery</li>
             <li>PHP</li>
@@ -76,8 +86,8 @@
         </ul>
     </section>
     <section class="section">
-        <h2 class="section-title"><span>Получение опыта</span></h2>
-        <div class="timeline color-1">
+        <h2 class="section-title"><span>Experience</span></h2>
+        <div class="timeline timeline-primary">
             <div class="timeline-date timeline-start">2013</div>
             <div class="timeline-container">
                 <h3 class="timeline-subtitle">Международный Гуманитарный Универсивет</h3>
@@ -88,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="timeline color-2">
+        <div class="timeline timeline-secondary">
             <div class="timeline-date">2013</div>
             <div class="timeline-container">
                 <h3 class="timeline-subtitle">Рекламное агентство</h3>
@@ -99,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <div class="timeline color-2">
+        <div class="timeline timeline-secondary">
             <div class="timeline-date">2014</div>
             <div class="timeline-container">
                 <h3 class="timeline-subtitle">Фото и дизайн студия</h3>
@@ -111,8 +121,8 @@
                 </div>
             </div>
         </div>
-        <div class="timeline color-2">
-            <div class="timeline-date">2014-2015</div>
+        <div class="timeline timeline-secondary">
+            <div class="timeline-date">2014-2019</div>
             <div class="timeline-container">
                 <h3 class="timeline-subtitle">Software outsourcing and development</h3>
                 <h3 class="timeline-title">Tateeda</h3>
@@ -124,7 +134,7 @@
         </div>
     </section>
     <section class="section">
-        <h2 class="section-title"><span>Успешные проекты</span></h2>
+        <h2 class="section-title"><span>Examples</span></h2>
         <ul class="projects">
             <li class="project">
                 <a href="http://yesart.com.ua/" class="project-content" rel="nofollow" target="_blank">
@@ -161,125 +171,9 @@
     <div class="section mail"><a href="#mailto:igor_kra@outlook.com"><span class="icon-mail"></span> Mail me</a></div>
     <footer class="footer">
         <section class="section">
-            <p>© Resume, Design and Coding by Igor K., 2014</p>
+            <p>© Resume, Design and Coding by Igor K., <span id="js-current-year"></span></p>
         </section>
-    </footer>
-    <script>
-        $(function() {
-            $('.radialskills').on('showedByScroll', function() {
-                $('.radial.r80 .radial-number').animateNumber({
-                    number: 80
-                }, 1300);
-                $('.radial.r70 .radial-number').animateNumber({
-                    number: 70
-                }, 1000);
-                $('.radial.r40 .radial-number').animateNumber({
-                    number: 40
-                }, 700);
-            })
-            $(' .balon, .section-title, .radialskills, .timeline').showByScroll({
-                'name': 'show',
-                'offsetIndex': 1.2
-            });
-        });
-    </script>
-    <script>
-        (function(d) {
-            var p = function(b) {
-                    return b.split("").reverse().join("")
-                },
-                l = {
-                    numberStep: function(b, a) {
-                        var e = Math.floor(b);
-                        d(a.elem).text(e)
-                    }
-                },
-                h = function(b) {
-                    var a = b.elem;
-                    a.nodeType && a.parentNode && (a = a._animateNumberSetter, a || (a = l.numberStep), a(b.now, b))
-                };
-            d.Tween && d.Tween.propHooks ? d.Tween.propHooks.number = {
-                set: h
-            } : d.fx.step.number = h;
-            d.animateNumber = {
-                numberStepFactories: {
-                    append: function(b) {
-                        return function(a, e) {
-                            var k = Math.floor(a);
-                            d(e.elem).prop("number", a).text(k + b)
-                        }
-                    },
-                    separator: function(b, a) {
-                        b = b || " ";
-                        a =
-                            a || 3;
-                        return function(e, k) {
-                            var c = Math.floor(e).toString(),
-                                s = d(k.elem);
-                            if (c.length > a) {
-                                for (var f = c, g = a, l = f.split("").reverse(), c = [], m, q, n, r = 0, h = Math.ceil(f.length / g); r < h; r++) {
-                                    m = "";
-                                    for (n = 0; n < g; n++) {
-                                        q = r * g + n;
-                                        if (q === f.length) break;
-                                        m += l[q]
-                                    }
-                                    c.push(m)
-                                }
-                                f = c.length - 1;
-                                g = p(c[f]);
-                                c[f] = p(parseInt(g, 10).toString());
-                                c = c.join(b);
-                                c = p(c)
-                            }
-                            s.prop("number", e).text(c)
-                        }
-                    }
-                }
-            };
-            d.fn.animateNumber = function() {
-                for (var b = arguments[0], a = d.extend({}, l, b), e = d(this), k = [a], c = 1, h = arguments.length; c < h; c++) k.push(arguments[c]);
-                if (b.numberStep) {
-                    var f =
-                        this.each(function() {
-                            this._animateNumberSetter = b.numberStep
-                        }),
-                        g = a.complete;
-                    a.complete = function() {
-                        f.each(function() {
-                            delete this._animateNumberSetter
-                        });
-                        g && g.apply(this, arguments)
-                    }
-                }
-                return e.animate.apply(e, k)
-            }
-        })(jQuery);
-    </script>
-    <script>
-        ! function(a) {
-            a.fn.showByScroll = function(b) {
-                function d() {
-                    return a(window).height() / c.offsetIndex + a(window).scrollTop()
-                }
-
-                function e() {
-                    c.obj.each(function() {
-                        a(this).offset().top < d() && (a(this).addClass(c.name).trigger("showedByScroll"), c.obj = c.obj.not(a(this)))
-                    })
-                }
-                var c = a.extend({
-                    obj: a(this),
-                    name: "show",
-                    offsetIndex: 2
-                }, b);
-                e(), a(window).scroll(function() {
-                    e()
-                })
-            }
-        }(jQuery);
-	</script>
-	
-
-	<script src="main.js"></script>
+	</footer>
+	<script src="scripts/show-by-scroll.min.js"></script>
+	<script src="scripts/main.js"></script>
 </html>
