@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('js-current-year').innerText = new Date().getFullYear();
 
     
-    const elements = document.querySelectorAll('.balloon, .section-title, .radial, .timeline');			   
+    const elements = document.querySelectorAll('.balloon, .section-title, .radial, .timeline, .timeline-skills');			   
     new ShowByScroll(elements, {});
     
 })
