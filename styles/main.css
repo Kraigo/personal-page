@@ -9,18 +9,17 @@
 	--radial-animation: 1.2s;
 }
 
-* {
+body, html {
 	margin:0;
-	padding:0
-}
-html {
-	font-size: 62.5%
+	padding:0;	
+	font-size: 62.5%;
 }
 body {
 	background-color: var(--color-background);
 	color: #fff;
 	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 62.5%;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 /* Section */
@@ -44,23 +43,23 @@ body {
 	display: inline-block;
 	background-color: var(--color-background);
 	padding: 0 0.5em;
-	transition:0.6s ease;
+	transition: all 0.1s ease;
 	white-space: nowrap;
 }
 .section-title:before {
 	content: '';
-	width:100%;
+	width: 100%;
 	height: 3px;
-	top:50%;
+	top: 50%;
 	left: 0;
-	margin-top:-1px;
+	margin-top: -1px;
 	position: absolute;
 	background-color: #fff;
 	z-index: -1;
 	transition: all 0.3s ease;
 }
 .section-title:hover:before {
-	background-color:#fdbb01;
+	background-color: var(--color-secondary);
 }
 
 
@@ -76,6 +75,7 @@ body {
 	text-transform: uppercase;
 	vertical-align: middle;
 	transition: all 0.3s ease;
+	margin: 0;
 }
 .site-title:hover {
 	font-size: 90px;
@@ -154,6 +154,7 @@ body {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	margin-top: 27px;
+	margin-bottom: 0;
 }
 .radial-number {
 	font-size: 28px;
@@ -224,6 +225,8 @@ body {
 	text-align: center;
 	font-size: 22px;
 	font-size: 2.2rem;
+	margin: 0;
+	padding: 0;
 }
 .subskills li {
 	display: inline;
@@ -240,7 +243,29 @@ body {
 .subskills li:hover {
 	color: var(--color-primary);
 }
+.subskills-title {
+	/* text-align: center; */
+	text-transform: uppercase;
+	color: var(--color-tertiary);
+	margin-top: 35px;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+.subskills-title:after {
+	content: '';
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5px;
+	border-top: 1px solid var(--color-tertiary);
+}
+.subskills.subskills-front li:hover {
+	color: var(--color-primary);
 
+}
+.subskills.subskills-back li:hover {
+	color: var(--color-secondary);
+}
 
 /* Timeline */
 .timeline {
@@ -269,11 +294,13 @@ body {
 	font-size: 4.9rem;
 	font-weight: normal;
 	position: relative;
+	margin: 0;
 }
 .timeline-subtitle {
 	font-size: 20px;
 	font-size: 2rem;
 	font-weight: normal;
+	margin: 0;
 }
 .timeline-description {
 	font-size: 20px;
@@ -281,6 +308,9 @@ body {
 	line-height: 30px;
 	color: #576471;
 	font-weight: normal;
+}
+.timeline-description p {
+	margin: 0;
 }
 .timeline-date {
 	text-align: right;
@@ -290,8 +320,11 @@ body {
 	border-bottom-style: solid;
 	border-bottom-color: inherit;
 }
-.timeline-start { position: relative; }
-.timeline-start:before {
+.timeline:first-of-type .timeline-date {
+	position: relative;
+}
+/* .timeline-start { position: relative; } */
+.timeline:first-of-type .timeline-date:before {
 	content: '';
 	left: -3px;
 	top: 0;
@@ -315,6 +348,30 @@ body {
 	bottom: -10px;
 }
 .timeline:last-child:after {bottom: -20px;}
+.timeline-skills {
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+	list-style-type: none;
+	display: block;
+}
+.timeline-skills li {
+	color: var(--color-tertiary);
+	display: inline-block;
+	padding: 4px 12px;
+	font-size: 13px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	border: 1px solid var(--color-tertiary);
+	border-radius: 20px;
+	margin: 5px 0;
+	transition: all 0.4s ease;
+	text-transform: uppercase;
+}
+.timeline-skills li:hover {
+	color: var(--color-secondary);
+	border-color: var(--color-secondary);
+}
 
 
 /* Projects */
@@ -346,10 +403,12 @@ body {
 	font-size: 25px;
 	font-size: 2.5rem;
 	text-transform: uppercase;
+	margin: 0;
 }
 .project-description {
 	font-size: 16px;
 	font-size: 1.6rem;
+	margin: 0;
 }
 
 .mail {
@@ -373,6 +432,9 @@ body {
 	text-align: center;
 	font-size: 16px;
 	font-size: 1.6rem;
+}
+.footer p {
+	margin: 0;
 }
 
 
@@ -421,4 +483,12 @@ body {
 	height: 21px;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAVCAMAAAD/0XfmAAAAV1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////+ORg7oAAAAHHRSTlMABpH9AizhXx/piFQo+PJ5XaQZ2J1/LxPAvnM22C2kUwAAAOFJREFUKM+1kkmSwyAMRQEBCQbEENuZdP9ztgyuUOlm229j8+shsfhC35NaGPWLHqa7FjI4iDEC0DfQUhekkKad1+zzZcCntd0xbASMFmljWQ843ghtxDYDXUourkGLgQ5rPGI0hwE2SG/h6eVHkP4J1stg4TSqkO9CmOop1IRU3lLUj3Hl9LpZKrs8BuyF7NayYfTJN7hlDjJ/eeNfg/8KueWyOCqcTwymvpCI8MXvmRl908M+eMPU6GiTjRYzY8AD5sbgvwy36zm76waRGt346og6++EAaA60jrWeqjmtpz+ykhLNpxAvMQAAAABJRU5ErkJggg==);
 	vertical-align: baseline;
+}
+
+
+
+
+
+.link-icon-g {	
+	fill: #fff
 }
