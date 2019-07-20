@@ -456,12 +456,12 @@ body {
 .timeline.show .timeline-container {
 	transform: translate(0,0);
 }
-.timeline-skills {
+.timeline-skills li {
 	opacity: 0;
 	transition-delay: 0.3s;
 	transition: opacity 0.9s ease;
 }
-.timeline-skills.show {
+.timeline-skills li.show {
 	opacity: 1;
 }
 

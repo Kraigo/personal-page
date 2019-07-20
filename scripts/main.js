@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('js-current-year').innerText = new Date().getFullYear();
 
     
-    const elements = document.querySelectorAll('.balloon, .section-title, .radial, .timeline, .timeline-skills');			   
+    const elements = document.querySelectorAll('.balloon, .section-title, .radial, .timeline');    
     new ShowByScroll(elements, {});
     
+    [].forEach.call(document.querySelectorAll('.timeline-skills'), function(item) {
+        new ShowByScroll(item.querySelectorAll('li'), {delay: 80});
+    });
 })
