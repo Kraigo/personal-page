@@ -1,0 +1,50 @@
+# cv.kraigo.dev
+#
+# This page is meant to be reached by a link I hand out — not found in search,
+# not archived, not scraped into a training set.
+#
+# Note the deliberate asymmetry below:
+#
+#   * Search engines are ALLOWED to fetch the page. That is not an oversight.
+#     Removal from an index is driven by the "noindex" meta tag in index.html,
+#     and a crawler can only obey a tag it is permitted to read. Blocking
+#     Googlebot here would leave it unable to see "noindex" while still free to
+#     list a bare URL it discovered via a link elsewhere — the opposite of the
+#     intent. Letting it in is what gets the page dropped.
+#
+#   * Everyone else is blocked outright.
+#
+# robots.txt is a request, not a control. It is honoured only by crawlers that
+# choose to honour it.
+
+
+# ── Search engines: allowed in, so they can read "noindex" and drop the page ──
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: YandexBot
+User-agent: Baiduspider
+Allow: /
+
+
+# ── Link previews, so a pasted link still unfurls in chat ────────────────────
+
+User-agent: LinkedInBot
+User-agent: Twitterbot
+User-agent: facebookexternalhit
+User-agent: TelegramBot
+User-agent: Slackbot
+User-agent: Slackbot-LinkExpanding
+User-agent: WhatsApp
+User-agent: Discordbot
+User-agent: SkypeUriPreview
+User-agent: SignalBot
+Allow: /
+
+
+# ── Everything else: AI crawlers, scrapers, SEO brokers, archivers ───────────
+
+User-agent: *
+Disallow: /

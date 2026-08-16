@@ -1,342 +1,510 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
-
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Igor K. summery</title>
-	
-    <link href="styles/main.css" rel="stylesheet"></link>
-    <link href="styles/experiment.css" rel="stylesheet"></link>
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Igor K. — Mobile &amp; Web Engineer (Flutter &amp; Angular)</title>
+    <meta name="description"
+        content="Mobile and web engineer. Flutter apps in the App Store and Google Play, Angular at enterprise scale. 13+ years in production development.">
+    <meta name="author" content="Igor K.">
+    <link rel="canonical" href="https://cv.kraigo.dev/">
+
+    <!-- Reachable by direct link only: keep it out of every index, cache and
+         training set. robots.txt deliberately lets search crawlers fetch the
+         page so they can read this tag — see the note in that file.
+         noai/noimageai are a convention some crawlers honour, not a standard. -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://cv.kraigo.dev/">
+    <meta property="og:title" content="Igor K. — Mobile &amp; Web Engineer">
+    <meta property="og:description"
+        content="Flutter and Angular. 13+ years of production development, mobile and web.">
+    <meta property="og:image" content="https://cv.kraigo.dev/images/portrait-640.jpg">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="640">
+    <meta property="og:image:alt" content="Portrait of Igor K.">
+    <meta name="twitter:card" content="summary">
+
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script>
+        // Applied before first paint so neither choice flashes on load.
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+
+            var l = sessionStorage.getItem('lang');
+            if (l !== 'en' && l !== 'uk') {
+                l = (navigator.language || 'en').toLowerCase().indexOf('uk') === 0 ? 'uk' : 'en';
+            }
+            document.documentElement.lang = l;
+        } catch (e) { }
+    </script>
 </head>
 
 <body>
-    <header class="header">
-        <section class="section">
-            <h1 class="site-title">Igor K.</h1>
-            <p class="site-description">Front-End developer</p>
-        </section>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+    <header class="nav" id="nav">
+        <div class="nav-inner wrap">
+            <a class="nav-brand" href="#top">
+                <span class="nav-mark" aria-hidden="true">IK</span>
+                <span class="nav-name">Igor K.</span>
+            </a>
+
+            <nav class="nav-links" data-i18n-label="a11y.sections" aria-label="Sections">
+                <a href="#now" data-i18n="nav.now">Now</a>
+                <a href="#strengths" data-i18n="nav.strengths">Strengths</a>
+                <a href="#stack" data-i18n="nav.stack">Stack</a>
+                <a href="#ai" data-i18n="nav.ai">AI</a>
+                <a href="#work" data-i18n="nav.work">Work</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="lang-toggle" id="lang-toggle" role="group" data-i18n-label="a11y.language"
+                    aria-label="Language">
+                    <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+                    <button class="lang-btn" type="button" data-lang="uk" aria-pressed="false">UK</button>
+                </div>
+
+                <button class="theme-toggle" id="theme-toggle" type="button" data-i18n-label="a11y.theme"
+                    aria-label="Switch colour theme" aria-pressed="false">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4.2" />
+                        <path
+                            d="M12 2.6v2.6M12 18.8v2.6M4.2 12H1.6M22.4 12h-2.6M6.5 6.5 4.6 4.6M19.4 19.4l-1.9-1.9M17.5 6.5l1.9-1.9M4.6 19.4l1.9-1.9" />
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
-    <section class="section">
-        <div class="balloon">
-			<p>
-                Hello! My name is Igor, I'm <span id="js-birthday">35</span> old and I live in Odessa.
-            </p>
-            <p>
-                I do web development, always try to follow the innovations in the world of the Internet and design and corresponds that.
-            </p>
-            <p>
-                Over 15 years of experience in Web Development, client-side applications, Node.js applications and RESTful APIs. Graduated with a degree in "Information Technology".                
-            </p>
-            <p>
-                I have been working in mobile development for over 5 years. I specialize in cross-platform applications using Flutter technology.
-            </p>
-            <p>
-                Also have rich experiences in progressive web, responsive design, cross browser compatibility, cross-platform mobile applications.
 
-			</p>
-        </div>
-    </section>
-    <section class="section">
-        <h2 class="section-title"><span>My skills</span></h2>
-		<ul class="radialskills">
-			<li>
-				<div class="radial radial-primary">
-					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 142">
-						<circle r="25" cx="50" cy="50" class="radial-pie"/>
-					</svg>
-					<p class="radial-title" title="JavaScript">JS</p>					
-					<span class="radial-number" data-number="90"></span>	
-				</div>
-			</li>
-			<li>
-				<div class="radial radial-primary">
-					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 126">
-						<circle r="25" cx="50" cy="50" class="radial-pie"/>
-					</svg>
-					<p class="radial-title" title="Front-end">Front</p>					
-					<span class="radial-number" data-number="80"></span>	
-				</div>
-			</li>
-			<li>
-				<div class="radial radial-secondary">
-					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 94">
-						<circle r="25" cx="50" cy="50" class="radial-pie"/>
-					</svg>
-					<p class="radial-title" title="Back-end">Back</p>					
-					<span class="radial-number" data-number="60"></span>	
-				</div>
-			</li>
-			<li>
-				<div class="radial radial-tertiary">
-					<svg width="100" height="100" viewbox="0 0 100 100" class="radial-chart" style="--radial-value: 110">
-						<circle r="25" cx="50" cy="50" class="radial-pie"/>
-					</svg>
-					<p class="radial-title">UI</p>					
-					<span class="radial-number" data-number="70"></span>	
-				</div>
-			</li>
-        </ul>
+    <main id="main">
 
-        <h4 class="subskills-title">Front-End directions</h4>
-        <ul class="subskills subskills-front">
-            <li>Typescript</li>
-            <li>ES2016</li>
-            <li>Angular</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>Native Script</li>
-            <li>WebSocket</li>
-            <li>Webpack</li>
-            <li>Gulp</li>
-            <li>PWA</li>
-            <li>Bootstrap</li>
-            <li>Material</li>
-            <li>Kendo</li>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-            <li>After Effect</li>
-        </ul>
+        <!-- ── Hero ─────────────────────────────────────────────────────── -->
+        <section class="hero" id="top">
+            <div class="wrap hero-inner">
+                <figure class="hero-photo reveal">
+                    <img src="images/portrait-320.jpg"
+                        srcset="images/portrait-320.jpg 1x, images/portrait-640.jpg 2x"
+                        alt="Igor K." width="320" height="320" decoding="async">
+                </figure>
 
-        <h4 class="subskills-title">Back-End directions</h4>
-        <ul class="subskills subskills-back">
-            <li>NodeJS</li>
-            <li>Express</li>
-            <li>NestJS</li>
-            <li>C#/DotNet</li>
-            <li>MongoDB</li>
-            <li>MySQL</li>
-            <li>MSSQL</li>
-            <li>Unit Tests</li>
-            <li>REST</li>
-        </ul>
+                <div class="hero-copy">
+                    <p class="hero-status reveal">
+                        <span class="dot" aria-hidden="true"></span>
+                        <span data-i18n="hero.status">Open to senior &amp; lead roles</span>
+                    </p>
 
-    </section>
-    <section class="section">
-        <h2 class="section-title"><span>Experience</span></h2>
-        <div class="timeline timeline-primary">
-            <div class="timeline-date">at 2013</div>
-            <div class="timeline-container">
-                <h3 class="timeline-subtitle">International Humanitarian University</h3>
-                <h3 class="timeline-title">Master</h3>
-                <div class="timeline-description">
-                    <p>Факультет Компьютерный наук и<br> Инновационных технологий</p>
-                    <p>Ukraine, Odessa</p>
+                    <h1 class="hero-title reveal">Igor K.</h1>
+
+                    <p class="hero-role reveal" data-i18n="hero.role">
+                        Mobile &amp; Web Engineer — Flutter and Angular
+                    </p>
+
+                    <p class="hero-lede reveal" data-i18n="hero.lede">Flutter apps in the App Store and Google Play, Angular systems in daily enterprise use. Thirteen years in production development.</p>
+
+                    <ul class="hero-meta reveal">
+                        <li data-i18n="hero.meta.country">Ukraine</li>
+                        <li data-i18n="hero.meta.remote">Remote, UTC+2</li>
+                        <li><span id="js-age">36</span> <span data-i18n="hero.meta.age">years old</span></li>
+                        <li data-i18n="hero.meta.english">English: upper-intermediate</li>
+                    </ul>
+
+                    <div class="hero-actions reveal">
+                        <a class="btn btn-primary js-mail" data-x="dmVkLm9naWFyaw==" data-y="bWFp"
+                            data-i18n="btn.email">Email me</a>
+                        <a class="btn" data-x="b2dpYXJLL21vYy5idWh0aWcvLzpzcHR0aA==" target="_blank"
+                            rel="noopener nofollow">
+                            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" stroke="none"
+                                    d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.35-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a class="btn" data-x="LzA0MWI5OWE5Mi1rdWhjdmFyay1yb2dpL25pL21vYy5uaWRla25pbC53d3cvLzpzcHR0aA=="
+                            target="_blank" rel="noopener nofollow">
+                            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" stroke="none"
+                                    d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6.5 0h3.8v1.64h.05a4.17 4.17 0 0 1 3.75-2.06c4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4V9Z" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="timeline timeline-secondary">
-            <div class="timeline-date timeline-start">2008-2011</div>
-            <div class="timeline-container">
-                <h3 class="timeline-subtitle">Travel agency</h3>
-                <h3 class="timeline-title">Voliatravel</h3>
-                <div class="timeline-description">
-                    <p>Development of advertising sites</p>
-                    <p>Worked with CMS</p>
-                    <p>Supporting and webmastering sites</p>
-                </div>
-                
-                <ul class="timeline-skills">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>JQuery</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline timeline-secondary">
-            <div class="timeline-date">2012-2013</div>
-            <div class="timeline-container">
-                <h3 class="timeline-subtitle">Advertising agency</h3>
-                <h3 class="timeline-title">
-                    Yesart
-                    <a href="https://yesart.com.ua/" target="_blank">
-                        <svg width="24px" height="24px" >
-                            <use xlink:href="#link-icon" width="24px" height="24px" />
-                        </svg>
-                    </a>
-                </h3>
-                <div class="timeline-description">
-                    <p>Development of advertising sites</p>
-                    <p>Refactoring visual part of site</p>
-                    <p>Adaptation site under SEO advice and promotion</p>
-                    <p>Working with the customer base</p>
-                    <p>Creating html emails</p>
-                    <p>Connecting JavaScript plugins</p>
-                    <p>Responsive design</p>
-                </div>
-                <ul class="timeline-skills">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>JQuery</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                    <li>PHP</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline timeline-secondary">
-            <div class="timeline-date">2014</div>
-            <div class="timeline-container">
-                <h3 class="timeline-subtitle">Photo and design studio</h3>
-                <h3 class="timeline-title">
-                    Kontora production
-                    
-                    <a href="http://kontora.co/" target="_blank">
-                        <svg width="24px" height="24px" >
-                            <use xlink:href="#link-icon" width="24px" height="24px" />
-                        </svg>
-                    </a>
-                </h3>
-                <div class="timeline-description">
-                    <p>Development of advertising sites and installing them on the CMS</p>
-                    <p>Creating original themes for the CMS</p>
-                    <p>Creating a site design</p>
-                    <p>Supporting sites</p>
-                </div>
-                <ul class="timeline-skills">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>JQuery</li>
-                    <li>Web Design</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                    <li>After Effect</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline timeline-secondary">
-            <div class="timeline-date">2014-2018</div>
-            <div class="timeline-container">
-                <h3 class="timeline-subtitle">Software outstaffing and development</h3>
-                <h3 class="timeline-title">
-                    Tateeda                    
-                    <a href="http://tateeda.com/" target="_blank">
-                        <svg width="24px" height="24px" >
-                            <use xlink:href="#link-icon" width="24px" height="24px" />
-                        </svg>
-                    </a>
-                </h3>
-                <div class="timeline-description">
-                    <p>Single Page applications.</p>
-                    <p>Supporting enterprise websites, update UI design and implementation new client logics.</p>
-                    <p>Using modern technologies in front-end tools</p>
-                    <p>Basic support c# projects, updating existing DB and implementation new logic to server-side</p>
-                    <p>Creating mobile applications using Kendo and PhoneGap, Cordova.</p>
-                    <p>Nativescript and React Native mobile applications</p>
-                    <p>Support existing code and start a new projects</p>
-                    <p>Setup structure and architecture for new projects</p>
-                </div>
-                <ul class="timeline-skills">
-                    <li>JavaScript</li>
-                    <li>Angular.js</li>
-                    <li>Vue</li>
-                    <li>React</li>
-                    <li>Nodejs</li>
-                    <li>SCSS</li>
-                    <li>.NET</li>
-                    <li>.NET Core</li>
-                    <li>Git</li>
-                    <li>Agile</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline timeline-secondary">
-            <div class="timeline-date">2018-now</div>
-            <div class="timeline-container">
-                <h3 class="timeline-subtitle">Team Lead of Front-End team</h3>
-                <br>
-                <div class="timeline-description">
-                    <p>Team Lead of Front-End team</p>
-                    <p>JQuery</p>
-                </div>
-                <ul class="timeline-skills">
-                    <li>Angular</li>
-                    <li>NativeScript</li>
-                    <li>NGRX</li>
-                    <li>Management</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <h2 class="section-title"><span>Examples</span></h2>
-        <ul class="projects">
-            <li class="project">
-                <a href="http://tateeda.com/" class="project-content" rel="nofollow" target="_blank">
-                    <h3 class="project-title">tateeda.com</h3>
-                    <p class="project-description">Company website</p>
-                </a>
-            </li>
-            <!-- <li class="project">
-                <a href="http://yesart.com.ua/" class="project-content" rel="nofollow" target="_blank">
-                    <h3 class="project-title">yesart.com.ua</h3>
-                    <p class="project-description">Сайт рекламного агентства Yesart</p>
-                </a>
-            </li>
-            <li class="project">
-                <a href="http://mozart-clinic.com/" class="project-content" rel="nofollow" target="_blank">
-                    <h3 class="project-title">mozart-clinic.com</h3>
-                    <p class="project-description">Центр эстетической хирургии и косметологии</p>
-                </a>
-            </li>
-            <li class="project">
-                <a href="http://villa-pinia.com/" class="project-content" rel="nofollow" target="_blank">
-                    <h3 class="project-title">villa-pinia.com</h3>
-                    <p class="project-description">Эко-отель Villa Pinia</p>
-                </a>
-            </li>
-            <li class="project">
-                <a href="http://sro-russia.ecfp.ru/" class="project-content" rel="nofollow" target="_blank">
-                    <h3 class="project-title">sro-russia.ecfp.ru</h3>
-                    <p class="project-description">Единый Центр Финансовой Поддержки</p>
-                </a>
-            </li>
-            <li class="project">
-                <a href="http://voliatravel.com/" class="project-content" rel="nofollow" target="_blank">
-                    <h3 class="project-title">voliatravel.com</h3>
-                    <p class="project-description">Туристическое агентство Volia Travel</p>
-                </a>
-            </li> -->
-        </ul>
-    </section>
-    <div class="section mail"><a href="#mailto:igor_kra@outlook.com"><span class="icon-mail"></span> Mail me</a></div>
-    <footer class="footer">
-        <section class="section">
-            <p>© Resume, Design and Coding by Igor K., <span id="js-current-year"></span></p>
         </section>
-	</footer>
-	<script src="scripts/show-by-scroll.min.js"></script>
+
+        <!-- ── Numbers ──────────────────────────────────────────────────── -->
+        <section class="stats" data-i18n-label="a11y.glance" aria-label="At a glance">
+            <div class="wrap">
+                <dl class="stats-grid">
+                    <div class="stat reveal">
+                        <dt class="stat-value"><span id="js-years">13</span>+</dt>
+                        <dd class="stat-label" data-i18n="stats.years">years in production development</dd>
+                    </div>
+                    <div class="stat reveal">
+                        <dt class="stat-value">10+</dt>
+                        <dd class="stat-label" data-i18n="stats.apps">
+                            apps shipped to the App&nbsp;Store &amp; Google&nbsp;Play
+                        </dd>
+                    </div>
+                    <div class="stat reveal">
+                        <dt class="stat-value">10+</dt>
+                        <dd class="stat-label" data-i18n="stats.enterprise">
+                            years on long-lived enterprise products
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ── Now ──────────────────────────────────────────────────────── -->
+        <section class="section" id="now">
+            <div class="wrap section-grid">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="now.eyebrow">01 — Now</p>
+                    <h2 class="section-title" data-i18n="now.title">What I'm working on</h2>
+                </div>
+
+                <div class="section-body">
+                    <div class="now-card reveal">
+                        <div class="now-head">
+                            <h3 class="now-role">Software Engineer III</h3>
+                            <span class="badge" data-i18n="now.since">Since Apr 2025</span>
+                        </div>
+                        <p class="now-company" data-i18n="now.company">
+                            Aya Healthcare · healthcare staffing platform
+                        </p>
+                        <p class="now-text" data-i18n="now.text1">Business-critical features for a healthcare staffing platform used daily by thousands of clinicians and recruiters: new functionality, UI work and production support across an Angular web app and Flutter mobile apps.</p>
+                        <p class="now-text" data-i18n="now.text2">Alongside development: requirement analysis, estimation and risk assessment within an Agile team.</p>
+                        <ul class="tags tags-small">
+                            <li>Angular</li>
+                            <li>TypeScript</li>
+                            <li>RxJS</li>
+                            <li>NgRx</li>
+                            <li>Flutter</li>
+                            <li>Dart</li>
+                            <li>.NET</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Strengths ────────────────────────────────────────────────── -->
+        <section class="section section-alt" id="strengths">
+            <div class="wrap section-grid">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="strengths.eyebrow">02 — Strengths</p>
+                    <h2 class="section-title" data-i18n="strengths.title">What I'm good at</h2>
+                    <p class="section-note">
+                        <!-- Split into three spans rather than one HTML string: the anchor's URL
+                             must stay out of the translation table, which ships as plain text. -->
+                        <span data-i18n="strengths.note.a">Full history is</span>
+                        <a data-x="LzA0MWI5OWE5Mi1rdWhjdmFyay1yb2dpL25pL21vYy5uaWRla25pbC53d3cvLzpzcHR0aA=="
+                            target="_blank" rel="noopener nofollow"><span
+                                data-i18n="strengths.note.b">on LinkedIn</span></a><span
+                            data-i18n="strengths.note.c">. Here's the short version.</span>
+                    </p>
+                </div>
+
+                <div class="section-body">
+                    <ul class="pillars">
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="strengths.mobile.title">Cross-platform mobile</h3>
+                            <p class="pillar-text" data-i18n="strengths.mobile.text">Flutter apps end to end: architecture, UI, store releases, production support. Led the migration from NativeScript to Flutter without stopping the live apps.</p>
+                        </li>
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="strengths.web.title">Enterprise web</h3>
+                            <p class="pillar-text" data-i18n="strengths.web.text">Angular at enterprise scale: predictable state management, testable modules, code that stays maintainable as the team grows.</p>
+                        </li>
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="strengths.design.title">Design implementation</h3>
+                            <p class="pillar-text" data-i18n="strengths.design.text">A designer’s background: I implement Figma layouts accurately — responsive and accessible — and give informed feedback on design decisions.</p>
+                        </li>
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="strengths.ship.title">Release &amp; support</h3>
+                            <p class="pillar-text" data-i18n="strengths.ship.text">Store submissions, CI/CD, code review, estimation. Long-term support of my own code in production.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Stack ────────────────────────────────────────────────────── -->
+        <section class="section" id="stack">
+            <div class="wrap section-grid">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="stack.eyebrow">03 — Stack</p>
+                    <h2 class="section-title" data-i18n="stack.title">What I work with</h2>
+                </div>
+
+                <div class="section-body">
+                    <dl class="stack reveal">
+                        <div class="stack-row">
+                            <dt class="stack-key" data-i18n="stack.mobile">Mobile</dt>
+                            <dd class="stack-val" data-i18n="stack.mobile.val">
+                                Flutter · Dart · iOS &amp; Android · store releases · Firebase ·
+                                push notifications · widget tests
+                            </dd>
+                        </div>
+                        <div class="stack-row">
+                            <dt class="stack-key" data-i18n="stack.web">Web</dt>
+                            <dd class="stack-val" data-i18n="stack.web.val">
+                                Angular · TypeScript · RxJS · NgRx · SCSS · responsive design ·
+                                Angular Material
+                            </dd>
+                        </div>
+                        <div class="stack-row">
+                            <dt class="stack-key" data-i18n="stack.backend">Backend</dt>
+                            <dd class="stack-val" data-i18n="stack.backend.val">
+                                Node.js · Bun · REST APIs · PostgreSQL · SQLite · .NET / C#
+                            </dd>
+                        </div>
+                        <div class="stack-row">
+                            <dt class="stack-key" data-i18n="stack.ai">AI</dt>
+                            <dd class="stack-val" data-i18n="stack.ai.val">
+                                LLM APIs · agents &amp; tool use · embeddings · vector search ·
+                                prompt design
+                            </dd>
+                        </div>
+                        <div class="stack-row">
+                            <dt class="stack-key" data-i18n="stack.delivery">Delivery</dt>
+                            <dd class="stack-val" data-i18n="stack.delivery.val">
+                                Git · GitHub Actions · CI/CD · Docker · Jest · code review ·
+                                Agile / Scrum
+                            </dd>
+                        </div>
+                        <div class="stack-row">
+                            <dt class="stack-key" data-i18n="stack.design">Design</dt>
+                            <dd class="stack-val">Figma · Photoshop · Illustrator</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── AI ───────────────────────────────────────────────────────── -->
+        <section class="section section-alt" id="ai">
+            <div class="wrap section-grid">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="ai.eyebrow">04 — AI</p>
+                    <h2 class="section-title" data-i18n="ai.title">How I use AI</h2>
+                    <p class="section-note" data-i18n="ai.note">Applied where it gives a real return.</p>
+                </div>
+
+                <div class="section-body">
+                    <ul class="pillars">
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="ai.agents.title">Agents</h3>
+                            <p class="pillar-text" data-i18n="ai.agents.text">LLM agents with tool access: scoped tasks, structured output, human review at the critical steps.</p>
+                        </li>
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="ai.code.title">AI in the codebase</h3>
+                            <p class="pillar-text" data-i18n="ai.code.text">Everyday tooling for code review, refactoring, documentation and prototyping — with verification of the output.</p>
+                        </li>
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="ai.embed.title">Embeddings &amp; retrieval</h3>
+                            <p class="pillar-text" data-i18n="ai.embed.text">Vector search over private data: chunking, indexing, and tuning retrieval quality.</p>
+                        </li>
+                        <li class="pillar reveal">
+                            <h3 class="pillar-title" data-i18n="ai.auto.title">Automation</h3>
+                            <p class="pillar-text" data-i18n="ai.auto.text">Bots and pipelines that automate routine processes, with an LLM step where fixed rules are not enough.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Work ─────────────────────────────────────────────────────── -->
+        <section class="section" id="work">
+            <div class="wrap section-grid">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="work.eyebrow">05 — Work</p>
+                    <h2 class="section-title" data-i18n="work.title">Personal projects</h2>
+                    <p class="section-note" data-i18n="work.note">Client work is under NDA. These are the public ones.</p>
+                </div>
+
+                <div class="section-body">
+
+                    <div class="work-group reveal">
+                        <h3 class="work-group-title" data-i18n="work.group.apps">Mobile apps</h3>
+                        <ul class="cards">
+
+                            <li class="card">
+                                <a class="card-link"
+                                    data-x="NjQzOTc2MDk3NmRpL29nYS1zeWFkLXBlZWt5YWQvcHBhL3N1L21vYy5lbHBwYS5zcHBhLy86c3B0dGg="
+                                    target="_blank" rel="noopener nofollow">
+                                    <div class="card-head">
+                                        <img class="card-icon" src="images/icons/daykeep.jpg" alt=""
+                                            width="48" height="48" loading="lazy" decoding="async">
+                                        <div>
+                                            <h4 class="card-title">DayKeep</h4>
+                                            <p class="card-kind">iOS &middot; App Store</p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text" data-i18n="work.daykeep">Home Screen widgets that count the days since a chosen date.</p>
+                                    <ul class="tags tags-small">
+                                        <li>Flutter</li>
+                                        <li>Dart</li>
+                                        <li>WidgetKit</li>
+                                    </ul>
+                                    <span class="card-arrow" aria-hidden="true">&rarr;</span>
+                                </a>
+                            </li>
+
+                            <li class="card">
+                                <a class="card-link" data-x="eWR1dHMub3BpbGYvLzpzcHR0aA=="
+                                    target="_blank" rel="noopener nofollow">
+                                    <div class="card-head">
+                                        <img class="card-icon" src="images/icons/flipo.png" alt=""
+                                            width="48" height="48" loading="lazy" decoding="async">
+                                        <div>
+                                            <h4 class="card-title">Flipo</h4>
+                                            <p class="card-kind" data-i18n="work.flipo.kind">
+                                                iOS &amp; Android &middot; beta
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text" data-i18n="work.flipo">Flashcards with AI-generated illustrations and spaced repetition, built for language learning.</p>
+                                    <ul class="tags tags-small">
+                                        <li>Flutter</li>
+                                        <li>Dart</li>
+                                        <li>AI</li>
+                                    </ul>
+                                    <span class="card-arrow" aria-hidden="true">&rarr;</span>
+                                </a>
+                            </li>
+
+                            <li class="card">
+                                <a class="card-link" data-x="L3ZlZC5vZ2lhcmsuZXJpYXRpbG9zLy86c3B0dGg="
+                                    target="_blank" rel="noopener nofollow">
+                                    <div class="card-head">
+                                        <span class="card-icon card-icon-blank" aria-hidden="true">S</span>
+                                        <div>
+                                            <h4 class="card-title">Solitaire</h4>
+                                            <p class="card-kind" data-i18n="work.solitaire.kind">Game</p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text" data-i18n="work.solitaire">Classic solitaire in Flutter: custom animations and gesture handling.</p>
+                                    <ul class="tags tags-small">
+                                        <li>Flutter</li>
+                                        <li>Dart</li>
+                                    </ul>
+                                    <span class="card-arrow" aria-hidden="true">&rarr;</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="work-group reveal">
+                        <h3 class="work-group-title" data-i18n="work.group.packages">Packages &amp; tools</h3>
+                        <ul class="cards">
+
+                            <li class="card">
+                                <a class="card-link" data-x="bG10aDJiZi9lZ2FrY2FwL21vYy5zam1wbi53d3cvLzpzcHR0aA=="
+                                    target="_blank" rel="noopener nofollow">
+                                    <div class="card-head">
+                                        <span class="card-icon card-icon-glyph" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M3.5 6h17v12h-17zM7.5 10v4m0-4h3v4m3-4v4m0-4h3v4m0-4h3v4" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <h4 class="card-title">fb2html</h4>
+                                            <p class="card-kind" data-i18n="work.fb2html.kind">npm package</p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text" data-i18n="work.fb2html">
+                                        Node.js parser that turns FB2 e-books into clean, readable HTML.
+                                    </p>
+                                    <ul class="tags tags-small">
+                                        <li>Node.js</li>
+                                    </ul>
+                                    <span class="card-arrow" aria-hidden="true">&rarr;</span>
+                                </a>
+                            </li>
+
+                            <li class="card">
+                                <a class="card-link" data-x="L3ZlZC5vZ2lhcmsucnEvLzpzcHR0aA=="
+                                    target="_blank" rel="noopener nofollow">
+                                    <div class="card-head">
+                                        <span class="card-icon card-icon-glyph" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h3v3h-3zM20 14v3M14 20h3M20 20h0" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <h4 class="card-title">QR Card</h4>
+                                            <p class="card-kind" data-i18n="work.qr.kind">Web app</p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text" data-i18n="work.qr">
+                                        Dynamic QR cards you can re-point without reprinting the code.
+                                    </p>
+                                    <ul class="tags tags-small">
+                                        <li>Angular</li>
+                                        <li>TypeScript</li>
+                                    </ul>
+                                    <span class="card-arrow" aria-hidden="true">&rarr;</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Contact ──────────────────────────────────────────────────── -->
+        <section class="section contact" id="contact">
+            <div class="wrap">
+                <div class="contact-box reveal">
+                    <p class="eyebrow" data-i18n="contact.eyebrow">06 — Contact</p>
+                    <h2 class="contact-title" data-i18n="contact.title">Let's talk about the details</h2>
+                    <p class="contact-text" data-i18n="contact.text">Full CV, project details and availability — in a call or by email.</p>
+
+                    <div class="contact-actions">
+                        <a class="btn btn-primary btn-large js-mail js-mail-text" data-x="dmVkLm9naWFyaw=="
+                            data-y="bWFp" data-i18n="btn.email">Email me</a>
+                        <a class="btn btn-large"
+                            data-x="LzA0MWI5OWE5Mi1rdWhjdmFyay1yb2dpL25pL21vYy5uaWRla25pbC53d3cvLzpzcHR0aA=="
+                            target="_blank" rel="noopener nofollow">LinkedIn</a>
+                        <a class="btn btn-large" data-x="b2dpYXJLL21vYy5idWh0aWcvLzpzcHR0aA=="
+                            target="_blank" rel="noopener nofollow">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <p>© <span id="js-year">2026</span>
+                <span data-i18n="footer.text">Igor K. — designed and coded by me.</span>
+            </p>
+            <p><a data-x="dmVkLm9naWFyay8vOnNwdHRo" target="_blank" rel="noopener nofollow">kraigo.dev</a></p>
+        </div>
+    </footer>
+
     <script src="scripts/main.js"></script>
-    
-    <svg style="display: none" >
-        <symbol id="link-icon"
-            viewBox="0 0 511.626 511.627"
-            width="511.626px" height="511.627px"
-            xml:space="preserve">
-            <g class="link-icon-g">
-                <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                    c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                    c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                    h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                    c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                    c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                    c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                    C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                    c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                    c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                    s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                    c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                </g>
-        </symbol>
-    </svg>
+</body>
+
 </html>

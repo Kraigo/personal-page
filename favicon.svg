@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #1d1d1f; }
+    .fg { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #f5f5f7; }
+      .fg { fill: #0b0b0d; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <text class="fg" x="32" y="33" text-anchor="middle" dominant-baseline="central"
+        font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace"
+        font-size="26" font-weight="600" letter-spacing="0.5">IK</text>
+</svg>
