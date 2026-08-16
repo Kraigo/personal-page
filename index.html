@@ -40,7 +40,15 @@
         // Applied before first paint so neither choice flashes on load.
         try {
             var t = localStorage.getItem('theme');
-            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+            if (t === 'light' || t === 'dark') {
+                document.documentElement.dataset.theme = t;
+                // The media-bound theme-color metas above follow the SYSTEM
+                // theme; an explicit choice must repaint the browser chrome too.
+                var tm = document.querySelectorAll('meta[name="theme-color"]');
+                for (var i = 0; i < tm.length; i++) {
+                    tm[i].setAttribute('content', t === 'dark' ? '#0b0b0d' : '#ffffff');
+                }
+            }
 
             var l = sessionStorage.getItem('lang');
             if (l !== 'en' && l !== 'uk') {

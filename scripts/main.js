@@ -273,6 +273,17 @@
 
         var sync = function () {
             toggle.setAttribute('aria-pressed', String(isDark()));
+
+            // The theme-color metas carry media="(prefers-color-scheme: …)",
+            // so on their own they follow the SYSTEM theme. Once the visitor
+            // picks a theme here, repaint the browser chrome (iOS Safari bars,
+            // Android address bar) to match the explicit choice.
+            var stored = document.documentElement.dataset.theme;
+            if (stored === 'dark' || stored === 'light') {
+                var colour = stored === 'dark' ? '#0b0b0d' : '#ffffff';
+                forEach(document.querySelectorAll('meta[name="theme-color"]'),
+                    function (m) { m.setAttribute('content', colour); });
+            }
         };
 
         toggle.addEventListener('click', function () {

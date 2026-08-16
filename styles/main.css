@@ -1037,10 +1037,10 @@ svg {
     }
 
     /* Doubled selector so it outweighs the base `.nav-links+.nav-actions`
-       rule; with the links gone, the toggles sit centred in the bar. */
+       rule; with the links gone, the toggles keep to the right edge. */
     .nav-actions,
     .nav-links+.nav-actions {
-        margin-inline: auto;
+        margin-left: auto;
     }
 }
 
