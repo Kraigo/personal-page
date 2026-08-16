@@ -1,4 +1,4 @@
-# cv.kraigo.dev
+# kraigo.dev
 #
 # This page is meant to be reached by a link I hand out — not found in search,
 # not archived, not scraped into a training set.
