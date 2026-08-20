@@ -136,19 +136,22 @@
         'stack.eyebrow': '03 — Стек',
         'stack.title': 'З чим працюю',
         'stack.mobile': 'Мобільна',
-        'stack.mobile.val': 'Flutter · Dart · iOS і Android · релізи в сторах · Firebase · ' +
-            'push-сповіщення · widget-тести',
+        'stack.mobile.val': 'Flutter · Dart · Provider · Firebase · iOS і Android · ' +
+            'релізи в сторах · push-сповіщення',
         'stack.web': 'Веб',
-        'stack.web.val': 'Angular · TypeScript · RxJS · NgRx · SCSS · адаптивна верстка · ' +
-            'Angular Material',
+        'stack.web.val': 'Angular · TypeScript · RxJS · NgRx · Signals · SCSS · ' +
+            'Angular Material · адаптивна верстка · i18n',
         'stack.backend': 'Бекенд',
-        'stack.backend.val': 'Node.js · Bun · REST API · PostgreSQL · SQLite · .NET / C#',
+        'stack.backend.val': 'Node.js · Bun · NestJS · Express · Hono · Drizzle · ' +
+            'PostgreSQL · SQLite · .NET / C# · REST API',
         'stack.ai': 'AI',
-        'stack.ai.val': 'LLM API · агенти та інструменти · ембединги · векторний пошук · ' +
-            'проєктування промптів',
+        'stack.ai.val': 'Claude API · Claude Code · MCP · LLM-агенти та інструменти · ' +
+            'ембединги · векторний пошук · проєктування промптів',
+        'stack.testing': 'Тестування',
+        'stack.testing.val': 'Jest · Jasmine / Karma · widget-тести · код-рев’ю',
         'stack.delivery': 'Процеси',
-        'stack.delivery.val': 'Git · GitHub Actions · CI/CD · Docker · Jest · код-рев’ю · ' +
-            'Agile / Scrum',
+        'stack.delivery.val': 'Git · GitHub Actions · Docker · Linux · Nginx · VPS · ' +
+            'Sentry · Jira · CI/CD · Agile / Scrum',
         'stack.design': 'Дизайн',
 
         'ai.eyebrow': '04 — AI',
