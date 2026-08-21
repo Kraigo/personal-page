@@ -181,6 +181,9 @@
             'для вивчення мов.',
         'work.solitaire.kind': 'Гра',
         'work.solitaire': 'Класичний пасьянс на Flutter: власні анімації та робота з жестами.',
+        'work.deepmenu.kind': 'Flutter-пакет · pub.dev',
+        'work.deepmenu': 'Контекстне меню в стилі iOS peek and pop: відкривається довгим ' +
+            'натисканням із зумом і розмиттям тла.',
         'work.fb2html.kind': 'npm-пакет',
         'work.fb2html': 'Парсер на Node.js: конвертує книжки FB2 у чистий HTML.',
         'work.qr.kind': 'Веб-застосунок',
