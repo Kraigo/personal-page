@@ -176,7 +176,7 @@
         'work.group.apps': 'Мобільні застосунки',
         'work.group.packages': 'Пакети та інструменти',
         'work.daykeep': 'Віджети для головного екрана: рахують дні від обраної дати.',
-        'work.flipo.kind': 'iOS і Android · бета',
+        'work.flipo.kind': 'iOS і Android · Google Play',
         'work.flipo': 'Флеш-картки з AI-ілюстраціями та інтервальним повторенням ' +
             'для вивчення мов.',
         'work.solitaire.kind': 'Гра',
